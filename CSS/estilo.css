@@ -1,0 +1,158 @@
+/* pie de pagina siempre abajo*/
+    html, body {
+        height: 100%;
+        margin: 0;
+    }
+    #contenedor {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        margin: 0 auto -60px;
+    }
+    #footer{
+        height: 60px;
+    }
+
+    #footer > p{
+        text-align: center;
+    }
+/*fin del blouqe*/ 
+
+/*INICIO ESTILOS DENTRO DEL BODY*/
+        
+    p{
+        text-align: center;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    form{
+        float: right;
+        width: 300px;
+        background: rgba(0,0,0,0.5);
+        padding: 10px 20px;
+        box-sizing: border-box;
+        margin-top: 20px;
+        border-radius: 7px;
+    }
+
+    h2{
+        color: #fff;
+        text-align: center;
+        margin: 0;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    input, textarea{
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 7px;
+        box-sizing: border-box;
+        font-size: 17px;
+        border: none;
+    }
+
+    textarea{
+        height: 30px;
+        min-height: 30px;
+        max-height: 50px;
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    #boton{
+        background: #31384a;
+        color:#fff;
+    }
+
+    #boton:hover{
+        cursor: pointer;
+    }
+
+    @media(max-width:480px){
+        form{
+            width: 100%;
+        }
+    }
+
+/*FIN ESTILOS DENTRO DEL BODY*/
+
+/*Inicio bloque menu css*/
+    header{
+        width: 100%;
+        background: #4F94AB;
+        position: fixed;
+        opacity: 0.8;
+    }
+
+    #btn-menu{
+        display: none;
+    }
+
+    header label{
+        display: none;
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        border-right: 1px solid white;
+    }
+
+    header label:hover{
+        cursor: pointer;
+        background: rgba(0,0,0,0.3)
+    }
+
+    .menu ul{
+        margin: 0;
+        list-style: none;
+        padding: 0;
+        display: flex;
+    }
+
+    .menu li{
+        border-right: 1px solid white;
+        flex-grow: 1;
+    }
+
+    .menu li:hover{
+        background: rgba(0,0,0,0.3)
+    }
+
+    .menu li a{
+        display: block;
+        padding: 15px 20px;
+        color: white;
+        text-decoration: none; 
+    }
+
+    @media(max-width:768px){
+        header label{
+            display: block;
+            color: white;
+        }
+
+        .menu{
+            position: absolute;
+            background: #4F94AB;
+            width: 70%;
+            margin-left: -70%;
+            transition: all 0.5s;
+        }
+
+        .menu ul{
+            flex-direction: column;
+        }
+
+        .menu li{
+            border-top: 1px solid white;
+        }
+
+        #btn-menu:checked ~ .menu{
+            margin: 0;
+        }
+    }
+
+/*Fin bloque menu css*/
